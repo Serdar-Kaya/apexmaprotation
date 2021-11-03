@@ -1,12 +1,19 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from "./components/HelloWorld.vue";
+import axios from "axios";
+
+const getData = axios
+  .get(
+    "https://api.mozambiquehe.re/maprotation?version=2&auth=1VzhbvWZZXKKWP5q9mux"
+  )
+  .then((response) => {
+    console.log(response.data.battle_royale.current.map);
+  });
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="That shit is fast" />
+  <p>bruh</p>
 </template>
 
 <style>
