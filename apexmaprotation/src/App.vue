@@ -11,7 +11,8 @@ const getData = axios
 </script>
 
 <template>
-  <p>bruh</p>
+  <p></p>
+  <div><h1>BATTLE ROYALE</h1></div>
 </template>
 
 <style>
