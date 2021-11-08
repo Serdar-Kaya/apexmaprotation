@@ -6,7 +6,8 @@ const getMapName = axios
     "https://api.mozambiquehe.re/maprotation?version=2&auth=1VzhbvWZZXKKWP5q9mux"
   )
   .then((response) => {
-    console.log(response.data.battle_royale.current.map);
+    document.getElementById("firstp").innerHTML =
+      response.data.battle_royale.current.map;
   });
 
 const getMapImage = axios
@@ -14,7 +15,8 @@ const getMapImage = axios
     "https://api.mozambiquehe.re/maprotation?version=2&auth=1VzhbvWZZXKKWP5q9mux"
   )
   .then((response) => {
-    console.log(response.data.battle_royale.current.asset);
+    document.getElementById("firstimg").innerHTML =
+      response.data.battle_royale.current.asset;
   });
 
 const getMapTime = axios
@@ -30,8 +32,9 @@ const getMapTime = axios
   <div id="main">
     <div>
       <h1>BATTLE ROYALE PUBS</h1>
-      <div class="image">there goes image</div>
-      <p>this should be remaning time</p>
+      <img src="" alt="" id="firstimg" />
+      <div class="image"></div>
+      <p id="firstp"></p>
     </div>
     <div>
       <h1>BATTLE ROYALE RANKED</h1>
@@ -72,7 +75,6 @@ const getMapTime = axios
   display: flex;
   height: 42rem;
   width: 69rem;
-  background-color: rgb(197, 182, 182);
   justify-content: center;
   align-items: center;
 }
